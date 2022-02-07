@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(
               onPressed: () {
                 Navigator.push(
-                    context,c
+                    context,
                     (MaterialPageRoute(
                       builder: (context) {
                         return InputPage();
