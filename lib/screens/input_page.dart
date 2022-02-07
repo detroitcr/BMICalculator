@@ -1,13 +1,12 @@
-import 'package:bmi_calculator/calculator_brain.dart';
+import 'package:bmi_calculator/function/calculator_brain.dart';
+import 'package:bmi_calculator/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../components/bottom_button.dart';
 import '../components/icon_content.dart';
 import '../components/reusable_card.dart';
 import '../components/round_icon.dart';
-import '../constants.dart';
+import '../constants/constants.dart';
 import 'results_page.dart';
 
 enum Gender {
@@ -21,15 +20,27 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender;
+  Gender? selectedGender;
   int height = 180;
   int weight = 60;
   int age = 18;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text('BMI calculator'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HomeScreen();
+                }));
+              },
+              icon: Icon(Icons.notification_add))
+        ],
+        title: Center(
+          child: Text('BMI calculator'),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
