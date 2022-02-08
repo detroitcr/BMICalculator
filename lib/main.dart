@@ -1,5 +1,7 @@
-import 'package:bmi_calculator/authentication/screen/login.dart';
+import 'package:bmi_calculator/authentication/screen/sign_up.dart';
 import 'package:flutter/material.dart';
+import 'authentication/screen/login.dart';
+import 'constants/constants.dart';
 
 void main() => runApp(BMICalculator());
 
@@ -10,13 +12,15 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF0A0E21),
-        scaffoldBackgroundColor: Color(0xFF0A0E21),
-      ),
+      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
+      // theme: ThemeData.dark().copyWith(
+      //   primaryColor: Color(0xFF0A0E21),
+      //   scaffoldBackgroundColor: Color(0xFF0A0E21),
+      // ),
       //home: InputPage(),
       //home: HomeScreen(),
-      home: LoginScreen(),
+       home: LoginScreen(),
+      //home: SignUpScreen(),
     );
   }
 }

@@ -5,12 +5,15 @@ class CustomTextField extends StatelessWidget {
   final bool isPass;
   final String hintText;
   final TextInputType textInputType;
-
+  final Icon? icon;
+  final Widget? suffixicon;
   CustomTextField(
       {Key? key,
       required this.textEditingController,
       required this.textInputType,
       required this.hintText,
+      this.icon,
+      this.suffixicon,
       this.isPass = false})
       : super(key: key);
 
@@ -23,7 +26,8 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       controller: textEditingController,
       decoration: InputDecoration(
-        // icon: Icon(Icons.email),
+        suffixIcon: suffixicon,
+        prefixIcon: icon,
         hintText: hintText,
         border: inputBorder,
         focusedBorder: inputBorder,
