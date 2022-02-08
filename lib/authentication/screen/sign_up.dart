@@ -151,7 +151,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 12,
+                  height: 16,
                 ),
                 // // for creating spacing in upper side
                 // Flexible(
