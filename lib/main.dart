@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/authentication/screen/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'authentication/screen/login.dart';
-import 'constants/constants.dart';
+
 
 void main() => runApp(BMICalculator());
 

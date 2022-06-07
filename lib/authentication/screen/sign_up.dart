@@ -22,17 +22,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _usernamecontroller = TextEditingController();
   bool isHiddenPassword = true;
 
-  // @override
-  // // for permanently remove or unmounted
-
-  // void dispose() {
-  //   super.dispose();
-  //   _emailcontroller.dispose();
-  //   _passwordcontroller.dispose();
-  //   _mobilenumbercontroler.dispose();
-  //   _usernamecontroller.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +36,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               // centered like horizontal direction x axis
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(
+                  height: 20,
+                ),
                 // svg image
                 SvgPicture.asset(
                   'assets/images/logo.svg',
@@ -56,27 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 40,
                 ),
-                // circular widget to accept and show our selectedfile
-                // Stack(
-                //   children: [
-                //     CircleAvatar(
-                //       radius: 64,
-                //       backgroundImage: NetworkImage(
-                //           'https://images.unsplash.com/photo-1642056583446-9223e0684e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'),
-                //     ),
-                //     Positioned(
-                //       bottom: -10,
-                //       left: 80,
-                //       child: IconButton(
-                //         onPressed: () {},
-                //         icon: Icon(Icons.add_a_photo),
-                //       ),
-                //     ),
-                //   ],
-                // ),
-                const SizedBox(
-                  height: 24,
-                ),
+
                 // textfield input user
                 CustomTextField(
                   // we have to create a variable for text editing controller
@@ -136,15 +108,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    child: const Text('Continue'),
+                    child: const Text(
+                      'Continue',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     alignment: Alignment.center,
                     decoration: const ShapeDecoration(
-                      color: blueColor,
+                      color: Colors.red,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                          Radius.circular(14),
                         ),
                       ),
                     ),
@@ -153,12 +128,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                // // for creating spacing in upper side
-                // Flexible(
-                //   child: Container(),
-                //   flex: 2,
-                // ),
-                // Transitioning to signing up
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -182,6 +151,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           'Log in',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.blue,
                           ),
                         ),
                         padding: const EdgeInsets.symmetric(vertical: 8),
